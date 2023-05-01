@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import css from './FriendListItem.module.css'
 
-export const FriendListItem = ({ id, avatar, name, isOnline }) => {
+export const FriendListItem = ({avatar, name, isOnline }) => {
     return (
-        <li key={id} className={css.item}>
+        <li className={css.item}>
             <span className={css.status}>{isOnline ? (
         <button className={css.statusOn}>.</button>) : (
         <button className={css.statusOff}>.</button>)
@@ -15,7 +15,6 @@ export const FriendListItem = ({ id, avatar, name, isOnline }) => {
     )
 }
 FriendListItem.propTypes = {
-    id: PropTypes.number.isRequired,
     avatar: PropTypes.string,
     name: PropTypes.string.isRequired,
     isOnline: PropTypes.bool.isRequired,
